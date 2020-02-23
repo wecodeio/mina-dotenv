@@ -2,6 +2,7 @@ require 'mina/dotenv/utils'
 require 'mina/scp'
 
 namespace :dotenv do
+  dotenv_location = ".env"
   desc 'Copies the local .env file to the server'
   task :push do
     dotenv = Mina::Dotenv::Utils.read_file(fetch(:dotenv_location))
